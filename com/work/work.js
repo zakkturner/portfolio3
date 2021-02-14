@@ -26,9 +26,8 @@ export default function Work() {
     let tl = gsap.timeline({ yoyo: true, repeat: -1 });
     // prettier-ignore
 
-    tl.to(text.reverse(), { duration: 5, opacity: 1, stagger: 0.2, motionPath: { path: path, align: path,  autoRotate: true,
-    } });
-    // .to(text.reverse(),{duration: .2, opacity: 0, stagger: .2, delay: 5}, 'text')
+    tl.to(text.reverse(), { duration: 5, opacity: 1, stagger: 0.2, ease: "power1.inOut" ,motionPath: { path: path,  autoRotate: true,
+    } })
   });
 
   return (

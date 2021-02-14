@@ -1,6 +1,9 @@
 .work {
   &__top {
     &__svgCont {
+      &_title {
+        font-size: 2rem;
+      }
       &__svg {
         visibility: hidden;
         &_circle {

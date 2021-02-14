@@ -11,16 +11,14 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>
-          Fullpage Javascript Navigation HOC with React Awesome Slider
-        </title>
+        <title>Zach Turner | Front End Developer</title>
         <meta
           name="viewport"
           content="width=device-width,minimum-scale=0.8,maximum-scale=1,user-scalable=no"
         />
         <meta
           name="description"
-          content="Fullpage navigation HOC with 3D animated transitions built on top of React Awesome Slider. GatsbyJS and NextJS recipes available."
+          content="Interactive Front End Developer, Based in Atlanta GA. Specializes in responsive, beautiful web development and sleek animations."
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
