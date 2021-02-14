@@ -10,49 +10,23 @@ import {
   withNavigationContext,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
+import Initial from "../com/initial/initial";
+import Work from "../com/work/work";
 
 export default function Home() {
-  const NavigationSlider = withNavigationHandlers(AwesomeSlider);
-  const Slider = () => {
-    return (
-      <NavigationSlider
-        className="awesome-slider"
-        media={[
-          {
-            slug: "/",
-            className: "home",
-            children: () => <p>Home</p>,
-          },
-          {
-            slug: "about",
-            className: "about",
-            children: () => <p>About</p>,
-          },
-        ]}
-      />
-    );
-  };
-  const Header = () => {
-    return (
-      <header>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="about">About</Link>
-        </nav>
-      </header>
-    );
-  };
-  const slug = "/";
   return (
     // <Provider slug={slug}>
     //   <Header />
     //   <NavigationSlider />
     // </Provider>
-    <AwesomeSlider animation="cubeAnimation" bullets="false">
-      <div style={{ backgroundColor: "blue" }}>1</div>
-      <div style={{ backgroundColor: "orange" }}>2</div>
+    <AwesomeSlider animation="cubeAnimation" bullets={false} fillParent={true}>
+      <div className={styles.main}>
+        <Initial />
+      </div>
+      <div className={styles.main}>
+        <Work />
+      </div>
       <div>3</div>
-      <div>4</div>
     </AwesomeSlider>
     // <main class={styles.main}>
     //   <div className={styles.container}></div>;

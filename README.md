@@ -1,12 +1,8 @@
 # My new portfolio for 2021-2022 coming soon
 
----
-
 My current is www.zach-turner.com
 
 ## What I used to build
-
----
 
 ### Next.Js/React
 

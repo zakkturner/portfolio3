@@ -1,13 +1,8 @@
 import React from "react";
-import ReactLogo from "../react-logo/react-logo";
-import "./startup.scss";
+import "./startup.module.scss";
 
 const Startup = () => {
-  return (
-    <div className="startup">
-      <ReactLogo />
-    </div>
-  );
+  return <div className="startup">Yo</div>;
 };
 
 export default Startup;
