@@ -1,0 +1,12 @@
+.work {
+  &__top {
+    &__svgCont {
+      &__svg {
+        visibility: hidden;
+        &_circle {
+          stroke-dasharray: 565.566px;
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ import {
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
 import Initial from "../com/initial/initial";
+import Work from "../com/work/work";
 
 export default function Home() {
   return (
@@ -22,7 +23,9 @@ export default function Home() {
       <div className={styles.main}>
         <Initial />
       </div>
-      <div>2</div>
+      <div className={styles.main}>
+        <Work />
+      </div>
       <div>3</div>
     </AwesomeSlider>
     // <main class={styles.main}>
