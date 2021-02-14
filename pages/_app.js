@@ -9,23 +9,25 @@ function App({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <Provider slug={router.route}>
+    <>
       <Head>
-        <title>Zach Turner | Front End Devloper</title>
+        <title>
+          Fullpage Javascript Navigation HOC with React Awesome Slider
+        </title>
         <meta
           name="viewport"
           content="width=device-width,minimum-scale=0.8,maximum-scale=1,user-scalable=no"
         />
         <meta
           name="description"
-          content="Front End Developer based in Atlanta, GA. Specializing in interactive UI and creative animations"
+          content="Fullpage navigation HOC with 3D animated transitions built on top of React Awesome Slider. GatsbyJS and NextJS recipes available."
         />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
+    </>
   );
 }
 
