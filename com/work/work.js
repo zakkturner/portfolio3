@@ -4,12 +4,15 @@ import { SplitText } from "gsap/dist/SplitText";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { MotionPathHelper } from "gsap/dist/MotionPathHelper";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import Project from "./project";
 
 gsap.registerPlugin(
   MotionPathPlugin,
   MorphSVGPlugin,
   //   MotionPathHelper,
+  ScrollTrigger,
   SplitText
 );
 
@@ -29,6 +32,8 @@ export default function Work() {
     tl.to(text.reverse(), { duration: 5, opacity: 1, stagger: 0.2, ease: "power1.inOut" ,motionPath: { path: path,  autoRotate: true,
     } })
   });
+
+  const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
     <div className={styles.work}>
@@ -65,6 +70,13 @@ export default function Work() {
               }}
             ></path>
           </svg>
+        </div>
+      </div>
+      <div className={styles.work__mid}>
+        <div className={styles.work__mid__workCont}>
+          {test.map((project) => {
+            return <Project />;
+          })}
         </div>
       </div>
     </div>

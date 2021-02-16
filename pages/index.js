@@ -12,6 +12,7 @@ import {
 } from "react-awesome-slider/dist/navigation";
 import Initial from "../com/initial/initial";
 import Work from "../com/work/work";
+import Thanks from "../com/thanks/thanks";
 
 export default function Home() {
   return (
@@ -23,10 +24,12 @@ export default function Home() {
       <div className={styles.main}>
         <Initial />
       </div>
-      <div className={styles.main}>
+      <div className={styles.main} style={{ overflow: "scroll" }}>
         <Work />
       </div>
-      <div>3</div>
+      <div>
+        <Thanks />
+      </div>
     </AwesomeSlider>
     // <main class={styles.main}>
     //   <div className={styles.container}></div>;
