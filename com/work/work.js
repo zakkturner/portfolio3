@@ -5,7 +5,7 @@ import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { MotionPathHelper } from "gsap/dist/MotionPathHelper";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Project from "./project";
 
 gsap.registerPlugin(
@@ -17,7 +17,9 @@ gsap.registerPlugin(
 );
 
 export default function Work() {
+  const [isActive, setIsActive] = useState(false);
   let title = useRef(null);
+  let details = useRef(null);
 
   let path = useRef(null);
   useEffect(() => {
@@ -31,6 +33,15 @@ export default function Work() {
 
     tl.to(text.reverse(), { duration: 5, opacity: 1, stagger: 0.2, ease: "power1.inOut" ,motionPath: { path: path,  autoRotate: true,
     } })
+
+    if (isActive) {
+      gsap.to(details, {
+        duration: 1,
+        css: { top: 0, opacity: 1 },
+        delay: 3,
+        ease: "power2.inOut",
+      });
+    }
   });
 
   const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -75,8 +86,14 @@ export default function Work() {
       <div className={styles.work__mid}>
         <div className={styles.work__mid__workCont}>
           {test.map((project) => {
-            return <Project />;
+            return <Project isActive={isActive} setIsActive={setIsActive} />;
           })}
+          <div
+            className={styles.work__mid__workCont__details}
+            ref={(el) => {
+              details = el;
+            }}
+          ></div>
         </div>
       </div>
     </div>
