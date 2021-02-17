@@ -24,7 +24,7 @@ export default function Home() {
       <div className={styles.main}>
         <Initial />
       </div>
-      <div className={styles.main} style={{ overflow: "scroll" }}>
+      <div className={styles.main} id="work">
         <Work />
       </div>
       <div>
