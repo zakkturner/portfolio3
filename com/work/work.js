@@ -5,7 +5,7 @@ import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { MotionPathHelper } from "gsap/dist/MotionPathHelper";
 import { MorphSVGPlugin } from "gsap/dist/MorphSVGPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Project from "./project";
 
 gsap.registerPlugin(
